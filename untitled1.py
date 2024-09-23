@@ -16,7 +16,7 @@ with open(scaler_path, 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
 # Title of the app
-st.title('Crop Prediction System')
+st.title('Crop Recommendation System')
 
 # Input fields for the user
 N = st.number_input('Nitrogen (N)', min_value=0, max_value=100, value=90)
@@ -28,7 +28,7 @@ ph = st.number_input('pH Level', value=6.5)
 rainfall = st.number_input('Rainfall (mm)', value=202.93)
 
 # Button for making predictions
-if st.button('Predict Crop'):
+if st.button('Recommend Crop'):
     # Prepare input data as a NumPy array
     input_data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
     
